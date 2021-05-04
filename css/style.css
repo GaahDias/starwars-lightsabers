@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+
+    color: white;
+    font-family: Arial;
+}
+
+:root {
+    --lightsaber-blade-color: #fa0c0c;
+    --lightsaber-shadow-color: #fa0c0c;
+}
+
+body {
+    background-color: rgb(36, 36, 36);
+}
+
+#div-color-options {
+    text-align: center;
+
+    margin-top: 3.5vh;
+}
+
+#div-color-options > label {
+    padding-left: 35px;
+    padding-right: 10px;
+
+    font-size: 1.2rem;
+}
+
+#lightsaber-hilt {
+    width: 2%;
+    height: 18vh;
+
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: .1vw;
+
+    cursor: pointer;
+}
+
+#lightsaber-blade {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10vh;
+    width: 1vw;
+    height: 60vh;
+
+    background-color: var(--lightsaber-blade-color);
+
+    border-radius: 5px 5px 2px 2px;
+
+    box-shadow: 
+    0 0 5px 1px var(--lightsaber-shadow-color),
+    0 0 15px 2px var(--lightsaber-shadow-color),
+    0 0 30px 2px var(--lightsaber-shadow-color),
+    0 0 50px 3px var(--lightsaber-shadow-color),
+    0 0 70px 3px var(--lightsaber-shadow-color),
+    inset 4px 4px 50px rgb(238, 238, 238);
+
+    transition: transform 140ms ease-in-out, background-color 200ms linear, box-shadow 500ms ease-in-out;
+    transform-origin: bottom;
+
+}
+
+.on-off {
+    transform: scaleY(0);
+}
